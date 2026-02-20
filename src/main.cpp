@@ -29,3 +29,14 @@ void setup() {
     Serial.println("LDR Light Intensity Monitoring System Initialized");
     Serial.println("Monitoring ambient light levels...");
 }
+
+void loop() {
+
+    // TODO 5:
+    // Read analog value from LDR
+    ldrValue = analogRead(LDR_PIN);
+
+    // TODO 6:
+    // Print raw ADC value
+    Serial.print("Raw ADC Value: ");
+    Serial.println(ldrValue);
