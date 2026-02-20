@@ -3,7 +3,7 @@
 /**
  * @file main.ino
  * @brief Embedded Light Intensity Monitoring using LDR
- * @author YOUR_NAME
+ * @author Krish_choudhary
  * @date 2026-02-20
  *
  * @details
@@ -40,3 +40,18 @@ void loop() {
     // Print raw ADC value
     Serial.print("Raw ADC Value: ");
     Serial.println(ldrValue);
+
+// TODO 7:
+    // Apply threshold logic (Bright / Dark detection)
+    if (ldrValue < 500) {   // Adjust threshold based on calibration
+        // TODO 8:
+        // Print brightness status
+        Serial.println("Status: BRIGHT Environment");
+    } else {
+        Serial.println("Status: DARK Environment");
+    }
+
+    // TODO 9:
+    // Add delay (1 second)
+    delay(1000);
+}
